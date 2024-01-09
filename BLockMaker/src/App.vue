@@ -1,7 +1,3 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import Button_Blok from './components/Button_Blok.vue';
-</script>
 
 <template>
   <div>
@@ -13,8 +9,24 @@ import Button_Blok from './components/Button_Blok.vue';
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <Button_Blok />
+  <DropDown_Blok :label="'Menu BURGER'" :options="dropDownOptions" :selectedOption="selectedOption" @update:selectedOption="selectedOption = $event" />
+
 </template>
+
+<script>
+import DropDown_Blok from '../src/components/DropDown_Blok.vue';
+export default {
+  components: {
+    DropDown_Blok
+  },
+  data() {
+    return {
+      dropDownOptions: ['MENU 1', 'MENU 2', 'MENU 3'],
+      selectedOption: 'MENU 2'
+    };
+  }
+};
+</script>
 
 <style scoped>
 .logo {
