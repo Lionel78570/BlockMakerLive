@@ -1,6 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import Button_Blok from './components/Button_Blok.vue';
+import Logo_Blok from './components/Logo_Blok.vue';
+import Box_Blok from './components/Box_Blok.vue';
 </script>
 
 <template>
@@ -13,7 +15,11 @@ import Button_Blok from './components/Button_Blok.vue';
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <Button_Blok />
+  <Button_Blok bgColor="indigo" buttonText="hello world" boxshadow="5px 2px 2px black" borderRadius="10px" fontSize="50px" textColor="white"/>
+  <Logo_Blok src="src\assets\autofleet.png" alt="autofleet logo" width="50%" height="auto"/>
+  <Box_Blok display="flex" alignItems="center" justifyContent="center" bgColor="red" content="vasi ca fait chier">
+    
+  </Box_Blok>
 </template>
 
 <style scoped>
